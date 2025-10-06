@@ -22,11 +22,12 @@ class SearchScreen extends StatelessWidget {
                 ),
               ),
               onSubmitted: (value) {
-                if (value.isNotEmpty) {
+                final query = value.trim();
+                if (query.isNotEmpty) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => ResultsScreen(query: value),
+                      builder: (_) => ResultsScreen(query: query),
                     ),
                   );
                 }
@@ -36,12 +37,12 @@ class SearchScreen extends StatelessWidget {
             ElevatedButton(
               child: Text("Search"),
               onPressed: () {
-                final query = _controller.text.trim();
+                final query_ = _controller.text.trim();
                 if (query.isNotEmpty) {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (_) => ResultsScreen(query: query),
+                      builder: (_) => ResultsScreen(query: query_),
                     ),
                   );
                 }
