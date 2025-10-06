@@ -19,7 +19,6 @@ class _ResultsScreenState extends State<ResultsScreen> {
 
   @override
   void initState() {
-    super.initState();
     fetchRecipes();
   }
 
@@ -68,9 +67,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                             ? Image.network(recipe["image"], width: 60)
                             : null,
                         title: Text(recipe["title"] ?? "No title"),
-                        onTap: () {
-                          // You can navigate to a detail screen her
-                        },
+                       
                       ),
                     );
                   },
