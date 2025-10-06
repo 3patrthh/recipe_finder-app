@@ -14,7 +14,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
   bool _isLoading = true;
   List<dynamic> _recipes = [];
 
-  // 🧠 Replace with your Spoonacular API key
+  
   final String apiKey = "0424d93222674de48dbfeaf3b44dc16a";
 
   @override
@@ -69,7 +69,7 @@ class _ResultsScreenState extends State<ResultsScreen> {
                             : null,
                         title: Text(recipe["title"] ?? "No title"),
                         onTap: () {
-                          // You can navigate to a detail screen here
+                          // You can navigate to a detail screen her
                         },
                       ),
                     );
